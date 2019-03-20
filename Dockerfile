@@ -1,7 +1,6 @@
 FROM alpine:3.9.2 as deps
 RUN apk add --no-cache libgomp zlib libpng libjpeg-turbo libwebp tiff lcms2 \
-	freetype fontconfig ghostscript ghostscript-fonts \
-	openexr
+	freetype fontconfig ghostscript ghostscript-fonts openexr
 
 FROM deps as builder
 RUN apk add --no-cache alpine-sdk automake autoconf libtool bash
