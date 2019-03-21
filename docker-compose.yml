@@ -1,0 +1,11 @@
+version: '3'
+services:
+  imagemagick:
+    image: borg:imagemagick7
+    restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Stockholm
+    volumes:
+      - /disk_mirror/mirror/mange/bilder:/bilder
